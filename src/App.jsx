@@ -4,6 +4,7 @@ import StudentList from './pages/StudentsList'
 import CreateStudent from "./pages/CreateStudent"
 import Navbar from "./components/Navbar"
 import StudentDetails from "./pages/StudentDetails"
+import PageNotFound from "./pages/PageNotFound"
 function App() {
   return (
     <div>
@@ -13,6 +14,7 @@ function App() {
         <Route path="/students" element={<StudentList/>} />
         <Route path="/students/create" element={<CreateStudent/>}/>
         <Route path="/students/:studentId" element={<StudentDetails/>}/>
+        <Route path="*" element={<PageNotFound/>}/>
       </Routes>
     </div>
   )
