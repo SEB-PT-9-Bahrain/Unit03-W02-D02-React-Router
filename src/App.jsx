@@ -2,16 +2,17 @@ import { Route, Routes } from "react-router"
 import Homepage from './pages/Homepage'
 import StudentList from './pages/StudentsList'
 import CreateStudent from "./pages/CreateStudent"
-// Exercise 1:
-// 1. Make CreateStudent.jsx component
-// 2. make the route for it in the App.jsx at /students/create
+import Navbar from "./components/Navbar"
+import StudentDetails from "./pages/StudentDetails"
 function App() {
   return (
     <div>
+      <Navbar/>
       <Routes>
         <Route path="/" element={<Homepage/>}/>
         <Route path="/students" element={<StudentList/>} />
         <Route path="/students/create" element={<CreateStudent/>}/>
+        <Route path="/students/:studentId" element={<StudentDetails/>}/>
       </Routes>
     </div>
   )
